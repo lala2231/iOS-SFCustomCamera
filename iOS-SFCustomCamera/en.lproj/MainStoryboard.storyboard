@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="11G63b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--Default-->
+        <scene sceneID="5">
+            <objects>
+                <viewController storyboardIdentifier="SFDefault" id="2" customClass="SFDefault" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleAspectFit" image="Pix_Camera_TakePicture.png" highlightedImage="Pix_Camera_TakePicture_Highlighted.png" translatesAutoresizingMaskIntoConstraints="NO" id="Nfe-tp-xRQ">
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="H4h-Gr-xbW"/>
+                                    <constraint firstAttribute="height" constant="100" id="wYH-8h-Z12"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="aXv-du-rXc" appends="YES" id="Pll-oK-2oU"/>
+                                </connections>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Press me!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R61-b7-YhG">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="gwp-2E-ghd"/>
+                                    <constraint firstAttribute="width" constant="200" id="nNa-JZ-bwP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Nfe-tp-xRQ" firstAttribute="top" secondItem="3" secondAttribute="top" constant="152" id="Kmb-H1-678"/>
+                            <constraint firstItem="R61-b7-YhG" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="bf4-DJ-N2w"/>
+                            <constraint firstItem="R61-b7-YhG" firstAttribute="centerX" secondItem="Nfe-tp-xRQ" secondAttribute="centerX" type="default" id="e4Z-7H-hXd"/>
+                            <constraint firstItem="R61-b7-YhG" firstAttribute="top" secondItem="3" secondAttribute="top" constant="263" id="vQJ-YW-JHU"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="xGesture_CameraLongPress" destination="aXv-du-rXc" id="u4f-hg-s3Q"/>
+                        <outlet property="xImageView_Camera" destination="Nfe-tp-xRQ" id="J8K-NY-sXP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.10000000000000003" id="aXv-du-rXc">
+                    <connections>
+                        <action selector="cameraLongPressed:" destination="2" id="xuU-h3-ben"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-80" y="39"/>
+        </scene>
+        <!--Camera2-->
+        <scene sceneID="U9U-aE-U2A">
+            <objects>
+                <viewController storyboardIdentifier="SFCamera2" id="jHJ-0l-Y6D" customClass="SFCamera2" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Hiq-pg-8Ps">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hcA-rc-LXg"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MWg-fg-td0">
+                                <subviews>
+                                    <imageView contentMode="scaleAspectFit" image="Pix_xIcon.png" translatesAutoresizingMaskIntoConstraints="NO" id="DWq-4w-joM">
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Dbq-M4-TjY"/>
+                                            <constraint firstAttribute="width" constant="40" id="g6x-Xx-xEE"/>
+                                        </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="cXn-QF-Ca5" appends="YES" id="Iu9-rY-WeL"/>
+                                        </connections>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="4co-gh-35q">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="310" id="lXc-ii-LOO"/>
+                                            <constraint firstAttribute="width" constant="310" id="wOl-W6-cin"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView contentMode="scaleAspectFit" image="Pix_Camera_TakePicture.png" highlightedImage="Pix_Camera_TakePicture_Highlighted.png" translatesAutoresizingMaskIntoConstraints="NO" id="E0j-R7-ZnO">
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="75" id="0dt-7v-oa3"/>
+                                            <constraint firstAttribute="width" constant="75" id="VZf-9Y-MbV"/>
+                                        </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="IIe-LT-caN" appends="YES" id="vBR-3I-n5b"/>
+                                        </connections>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="4co-gh-35q" firstAttribute="top" secondItem="MWg-fg-td0" secondAttribute="top" constant="45" id="1Ov-5v-5uc"/>
+                                    <constraint firstItem="DWq-4w-joM" firstAttribute="top" secondItem="MWg-fg-td0" secondAttribute="top" type="default" id="b1O-sp-veh"/>
+                                    <constraint firstItem="DWq-4w-joM" firstAttribute="leading" secondItem="4co-gh-35q" secondAttribute="leading" type="default" id="bIJ-Vl-qNe"/>
+                                    <constraint firstAttribute="bottom" secondItem="E0j-R7-ZnO" secondAttribute="bottom" constant="10" id="c8a-4b-iEc"/>
+                                    <constraint firstItem="E0j-R7-ZnO" firstAttribute="centerX" secondItem="MWg-fg-td0" secondAttribute="centerX" type="default" id="kPJ-Gy-MJR"/>
+                                    <constraint firstItem="E0j-R7-ZnO" firstAttribute="centerX" secondItem="4co-gh-35q" secondAttribute="centerX" type="default" id="zN8-2Y-zor"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hcA-rc-LXg" firstAttribute="top" secondItem="Hiq-pg-8Ps" secondAttribute="top" type="default" id="2B6-BV-wVH"/>
+                            <constraint firstItem="hcA-rc-LXg" firstAttribute="bottom" secondItem="Hiq-pg-8Ps" secondAttribute="bottom" type="default" id="4kP-9M-nvV"/>
+                            <constraint firstItem="hcA-rc-LXg" firstAttribute="trailing" secondItem="Hiq-pg-8Ps" secondAttribute="trailing" type="default" id="52g-NN-fhj"/>
+                            <constraint firstItem="hcA-rc-LXg" firstAttribute="leading" secondItem="Hiq-pg-8Ps" secondAttribute="leading" type="default" id="66f-Aq-78H"/>
+                            <constraint firstItem="MWg-fg-td0" firstAttribute="trailing" secondItem="Hiq-pg-8Ps" secondAttribute="trailing" type="default" id="SRA-MC-UDT"/>
+                            <constraint firstItem="MWg-fg-td0" firstAttribute="leading" secondItem="Hiq-pg-8Ps" secondAttribute="leading" type="default" id="WXc-EK-j41"/>
+                            <constraint firstItem="MWg-fg-td0" firstAttribute="bottom" secondItem="Hiq-pg-8Ps" secondAttribute="bottom" type="default" id="igg-qi-Uf6"/>
+                            <constraint firstItem="MWg-fg-td0" firstAttribute="top" secondItem="Hiq-pg-8Ps" secondAttribute="top" type="default" id="zrH-b2-oVR"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="xGesture_CameraIconLongPress" destination="IIe-LT-caN" id="MCq-3v-Muu"/>
+                        <outlet property="xImageView_Camera" destination="4co-gh-35q" id="Iie-ws-Jr5"/>
+                        <outlet property="xImageView_CameraIcon" destination="E0j-R7-ZnO" id="EAZ-4M-PE9"/>
+                        <outlet property="xImageView_CancelIcon" destination="DWq-4w-joM" id="XgV-aV-ilC"/>
+                        <outlet property="xImageView_Screenshot" destination="hcA-rc-LXg" id="18j-wk-VVe"/>
+                        <outlet property="xTapGestureRecognizer_CancelIconTap" destination="cXn-QF-Ca5" id="Axt-up-dgr"/>
+                        <outlet property="xView_MainView" destination="MWg-fg-td0" id="YQK-YA-T39"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hyi-79-8Ke" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="cXn-QF-Ca5">
+                    <connections>
+                        <action selector="cancelIconTapped:" destination="jHJ-0l-Y6D" id="Ric-L8-UC9"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.10000000000000003" id="IIe-LT-caN">
+                    <connections>
+                        <action selector="cameraIconLongPressed:" destination="jHJ-0l-Y6D" id="kfI-gs-cOR"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="382" y="47"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Pix_Camera_TakePicture.png" width="150" height="150"/>
+        <image name="Pix_Camera_TakePicture_Highlighted.png" width="150" height="150"/>
+        <image name="Pix_xIcon.png" width="90" height="90"/>
+    </resources>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="SFCamera2" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SFCamera2.h"/>
+            <relationships>
+                <relationship kind="action" name="acceptIconLongPressed:" candidateClass="UILongPressGestureRecognizer"/>
+                <relationship kind="action" name="backIconTapped:"/>
+                <relationship kind="action" name="cameraIconLongPressed:" candidateClass="UILongPressGestureRecognizer"/>
+                <relationship kind="action" name="cancelIconTapped:"/>
+                <relationship kind="outlet" name="xGestureRecognizer_AcceptIconLongPress" candidateClass="UILongPressGestureRecognizer"/>
+                <relationship kind="outlet" name="xGesture_CameraIconLongPress" candidateClass="UILongPressGestureRecognizer"/>
+                <relationship kind="outlet" name="xImageView_2_AcceptIcon" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="xImageView_2_BackIcon" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="xImageView_2_CapturedImage" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="xImageView_Camera" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="xImageView_CameraIcon" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="xImageView_CancelIcon" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="xImageView_Screenshot" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="xTapGestureRecognizer_BackIconTap" candidateClass="UITapGestureRecognizer"/>
+                <relationship kind="outlet" name="xTapGestureRecognizer_CancelIconTap" candidateClass="UITapGestureRecognizer"/>
+                <relationship kind="outlet" name="xView_2_MainView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="xView_MainView" candidateClass="UIView"/>
+            </relationships>
+        </class>
+        <class className="SFDefault" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SFDefault.h"/>
+            <relationships>
+                <relationship kind="action" name="cameraLongPressed:" candidateClass="UILongPressGestureRecognizer"/>
+                <relationship kind="outlet" name="xGesture_CameraLongPress" candidateClass="UILongPressGestureRecognizer"/>
+                <relationship kind="outlet" name="xImageView_Camera" candidateClass="UIImageView"/>
+            </relationships>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
